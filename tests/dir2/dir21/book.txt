@@ -1,0 +1,22 @@
+If this were a real project, I’d recommend a few things:
+1. Test this application layer. Test it through and through. These will likely be integration
+tests, or full system tests, as unit testing controllers in any framework, except maybe
+something like Silex, is near impossible.
+2. Ditch the ZF2 components and use the Laravel counterparts. ZF2 isn’t component based,
+no matter how hard they try to pretend, and we were forced to bring along the kitchen
+sink just to use two tiny little slivers of the framework.
+3. Fully embrace Blade, or don’t. We kind of went half-and-half in the examples. I’d opt for
+not using blade; it’s just weird.
+Summary
+This was a lot of work. A lot of tedious work. If we were switching from ZF2 to Laravel in a real,
+large application, this would have been a lot more work.
+Switching to Laravel 243
+Is this feasible? It definitely is, as we’ve seen here, but it’s a huge undertaking. One that most
+certainly will lead to bugs and issues not present in the old system â€“ especially since we didn’t
+write any tests for this layer. As testing this layer can be quite complicated, I left it out of this
+book. However, having a full suite of tests for each layer will aid greatly in detecting and fixing
+issues early in the process.
+Switching frameworks is incredibly laborious. Do so sparingly, and spend a lot of time evaluating
+your framework choice up front, so that hopefully you’ll never have a need to switch. Further,
+write code intelligently and favor highly decoupled components. It will only make your
+application better in the long run.
