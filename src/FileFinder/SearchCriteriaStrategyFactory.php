@@ -12,7 +12,7 @@ class SearchCriteriaStrategyFactory {
 
     /**
      * 
-     * @param type $criteria
+     * @param string $criteria
      * @return ContentCriteriaStrategy|NameCriteriaStrategy
      */
     public function create($criteria) {
